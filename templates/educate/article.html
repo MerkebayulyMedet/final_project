@@ -1,0 +1,117 @@
+{% extends 'educate/layout.html' %}
+
+{% block main %}
+    <main id="main" class="site-main">
+        <section class="site-section-small section-blog-post">
+
+            <div class="container">
+
+                <div class="text-center">
+                    <h1 class="section-title-big">Article</h1>
+                </div><!-- /.text-center -->
+
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'educate:index' %}">Home</a></li>
+                    <li><a href="{% url 'educate:courses' %}">Courese</a></li>
+                    <li><a href="{% url 'educate:lists' exact_article.id %}">List of Articles</a></li>
+                    <li class="active">Article</li>
+                </ol><!-- /.breadcrumb -->
+
+                <div class="row">
+
+                    <div class="col-md-9">
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <img class="img-carousel post-img" src="../../static/educate/img/portfolio-1.jpg" alt="latest-news-1">
+
+                                <div class="post-content">
+
+                                    <h2 class="post-title">{{ exact_article.article_name }}</h2>
+                                    <ul class="post-meta list-unstyled">
+                                        <li><a href="{% url 'educate:lists' exact_article.course.id %}">{{ exact_article.course }}</a></li>
+                                        <li>{{ exact_article.article_date }}</li>
+                                        <!-- <li><a href="#Comments">15 Comments</a></li> -->
+                                    </ul><!-- /.post-meta -->
+
+                                    <p class="section-text">{{ exact_article.article_text }}</p>
+                                </div><!-- /.post-content -->
+
+                                <div class="post-information">
+
+                                    <img class="img-carousel" src="../../static/educate/img/employee-1.jpg" alt="">
+
+                                    <div class="post-information-content">
+
+                                        <p class="post-author-name">{{ exact_article.author }}</p>
+                                        <p class="post-author-position">{{ exact_article.author.author_qualification }}</p>
+                                    </div><!-- /.post-information-content -->
+
+                                </div><!-- /.post-information -->
+
+                                <div id="Comments" class="post-comments">
+
+                                    <h3>{{ comments_number }} Comments</h3>
+                                      {% if comments %}
+                                        {% for comment in comments %}
+                                          <div class="post-comment">
+                                              <img class="img-carousel" src="../../static/educate/img/employee-3.jpg" alt="">
+
+                                              <div class="post-comment-content">
+
+                                                  <p class="post-comment-author-name">{{ comment.comment_author }}</p>
+                                                  <p class="post-comment-date">{{ comment.comment_date }}</p>
+                                                  <p class="comment">{{ comment.comment_text }}</p>
+
+                                              </div><!-- /.post-comment-content -->
+
+                                          </div><!-- /.post-comment -->
+                                        {% endfor %}
+                                      {% endif %}
+
+                                    <div class="leave-comment">
+
+                                        <h3>Leave a comment</h3>
+
+                                        <form class="form-horizontal" method='POST' action="% url 'educate:comment' exact_article.id %">
+
+                                            <div class="row">
+
+                                                <div class="col-sm-6">
+                                                    <input class="form-control" type="text" name="name" required placeholder="Name *">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input class="form-control" type="email" name="email" required placeholder="Email *">
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <textarea class="form-control" placeholder="Comment" name="comment_text"></textarea>
+                                                </div>
+                                                <div class="col-sm-12 text-right">
+                                                    <button type="submit" class="btn btn-medium btn-yellow">Post Comment</button>
+                                                </div>
+
+                                            </div>
+
+                                        </form>
+
+                                    </div><!-- /.leave-comment -->
+
+                                </div><!-- /.post-comments -->
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- /.section-blog-post -->
+
+    </main><!-- /.site-main -->
+
+{% endblock main %}

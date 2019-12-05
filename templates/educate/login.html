@@ -1,0 +1,23 @@
+<!-- Please, call view 'authorize' on this page with password encryption -->
+<!-- Password encryption is made by javascript (tokens) -->
+
+{% extends 'educate/layout.html' %}
+
+{% block main %}
+<br><br><br>
+<form method="POST" action="{% url 'educate:auth_log' %}">
+  {% csrf_token %}
+  <div class="container">
+    {% if errors %}
+      <p>Your username and password didn't match. Please try again.</p>
+    {% endif %}
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter username" name="username" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <hr>
+    <button type="submit" class="registerbtn">Sign in</button>
+  </div>
+</form>
+{% endblock main %}

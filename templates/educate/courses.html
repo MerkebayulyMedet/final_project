@@ -1,0 +1,115 @@
+{% extends "educate/layout.html" %}
+
+{% block main %}
+    <main id="main" class="site-main">
+        <section class="site-section-small section-blog">
+
+            <div class="container">
+
+                <div class="text-center">
+
+                    <h1 class="section-title-big">Courses</h1>
+                    <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                </div>
+
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'educate:index' %}">Home</a></li>
+                    <li class="active">Courses</li>
+                </ol><!-- /.breadcrumb -->
+
+                <div class="row">
+
+                    <div class="col-md-9">
+                      {% if all_courses %}
+                        {% for course in all_courses %}
+                          <div class="blog-post">
+                              <div class="post-content">
+
+                                  <h3><a class="post-title" href="{% url 'educate:lists' course.id %}">{{ course.course_name }}</a></h3>
+                                  <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                              </div><!-- /.post-content -->
+                          </div><!-- /.blog-post -->
+                        {% endfor %}
+                      {% endif %}
+                        <!-- <div class="text-center">
+                            <ul class="pagination">
+                                <li><a href="#"><<</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">></a></li>
+                                <li><a href="#">>></a></li>
+                            </ul><!-- /.pagination -->
+                        <!-- </div><!-- /.text-center -->
+
+                    </div>
+
+                    <aside class="col-md-3">
+
+                        <div class="sidebar">
+
+                            <div class="widget search-form">
+                                <form>
+                                    <input class="form-control" type="search" placeholder="Search">
+                                    <button type="submit">
+                                        <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                </form>
+                            </div><!-- /.search-form -->
+
+                            <div class="widget widget-latest-posts">
+                                <h4 class="widget-title">Latest Posts</h4>
+
+                                <ul class="list-unstyled posts-list">
+                                    <li>
+                                        <a href="blog-post.html">
+                                            <div class="widget-thumb">
+                                                <img class="img-carousel" src="../../static/educate/img/portfolio-7.jpg" alt="">
+                                            </div>
+                                            <div class="widget-post-info">
+                                                <h4 class="widget-post-title">Business Perfect is the best Free Theme</h4>
+                                                <p class="widget-post-date">Sep 25, 2015</p>
+                                            </div><!-- /.widget-post-info -->
+                                        </a>
+                                    </li><!-- /.latest-post -->
+
+                                    <li>
+                                        <a href="blog-post.html">
+                                            <div class="widget-thumb">
+                                                <img class="img-carousel" src="../../static/educate/img/portfolio-8.jpg" alt="">
+                                            </div>
+                                            <div class="widget-post-info">
+                                                <h4 class="widget-post-title">We provide unique solutions</h4>
+                                                <p class="widget-post-date">Sep 23, 2015</p>
+                                            </div><!-- /.widget-post-info -->
+
+                                        </a>
+                                    </li><!-- /.latest-post -->
+
+                                    <li>
+                                        <a href="blog-post.html">
+                                            <div class="widget-thumb">
+                                                <img class="img-carousel" src="../../static/educate/img/portfolio-9.jpg" alt="">
+                                            </div>
+                                            <div class="widget-post-info">
+                                                <h4 class="widget-post-title">We are creative minds</h4>
+                                                <p class="widget-post-date">Sep 22, 2015</p>
+                                            </div><!-- /.widget-post-info -->
+                                        </a>
+                                    </li><!-- /.latest-post -->
+                                </ul>
+                            </div><!-- /.widget-latest-posts -->
+
+                        </div><!-- /.sidebar -->
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section><!-- /.section-blog -->
+    </main><!-- /.site-main -->
+
+{% endblock main %}

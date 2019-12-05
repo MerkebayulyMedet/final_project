@@ -1,0 +1,296 @@
+{% extends "educate/layout.html" %}
+
+{% block main %}
+<body>
+
+    <main id="main" class="site-main">
+
+        <section class="site-section-small section-who-we-are">
+
+            <div class="container">
+
+                <h2 class="section-title text-center pb-80">Who We Are</h2>
+
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+
+                </div>
+
+                <div class="text-center">
+
+                    <div class="row">
+
+                        <div class="col-sm-3 col-xs-6">
+                            <h4 class="small-title">Teachers</h4>
+                            <p class="counter" data-to="{{ teacher_number }}" data-speed="2000">{{ teacher_number }}</p>
+                        </div><!-- /.counter-item -->
+
+                        <div class="col-sm-3 col-xs-6">
+                            <h4 class="small-title">Clicks</h4>
+                            <p class="counter" data-to="{{ click_number }}" data-speed="2000">{{ click_number }}</p>
+                         </div><!-- /.counter-item -->
+
+                        <div class="col-sm-3 col-xs-6">
+                            <h4 class="small-title">Articles</h4>
+                            <p class="counter" data-to="{{ article_number }}" data-speed="2000">{{ article_number }}</p>
+                        </div><!-- /.counter-item -->
+
+                        <div class="col-sm-3 col-xs-6">
+                            <h4 class="small-title">Courses</h4>
+                            <p class="counter" data-to="{{ course_number }}" data-speed="2000">{{ course_number }}</p>
+                        </div><!-- /.counter-item -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- /.section-who-we-are -->
+
+        <section class="section-we-are-creative">
+
+            <div class="container-fluid">
+
+                <div class="row">
+
+                    <div class="col-sm-6 hidden-xs">
+                        <img class="img-carousel" src="../../static/educate/img/we-are-creative.jpg" alt="We are creative">
+                    </div>
+
+                    <div class="col-sm-6 project yellow-bg">
+
+                        <div class="project-content">
+
+                            <h3 class="section-title">We Are Creative</h3>
+                            <p class="small-title mb-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et nunc nunc. Ut consectetur felis sit amet fermentum accumsan. Vivamus ligula diam, aliquet id fringilla nec, elementum malesuada mauris. Nulla eu vehicula velit. Donec porta imperdiet luctus.</p>
+                            <a href="{% url 'educate:signup_page' %}" class="white-text">Join Us</a>
+
+                        </div> <!-- /.project-content-->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- /.section-we-are-creative -->
+
+        <section class="site-section-small section-team">
+
+            <div class="container">
+
+                <div class="text-center">
+
+                    <h3 class="section-title">Super Team</h3>
+                    <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="carousel carousel-sync one-slide-slider slide" id="oneSlideSlider">
+                            <div class="carousel-inner">
+                                    <div class="item active">
+                                        <div class="col-sm-12">
+                                            <div class="team-member">
+                                                <div class="team-member-img">
+                                                    <img class="img-carousel" src="../../static/educate/img/employee-1.jpg" alt="">
+                                                </div><!-- /.team-member-img -->
+                                                <div class="team-member-info">
+                                                    <h4 class="team-member-name">Mark Henderson</h4>
+                                                    <h5 class="team-member-position">CEO</h5>
+                                                    <p class="team-member-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    <div class="social-links">
+                                                        <a class="twitter-bg" href="#"><i class="fa fa-twitter"></i></a>
+                                                        <a class="facebook-bg" href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a class="google-plus-bg" href="#"><i class="fa fa-google-plus"></i></a>
+                                                        <a class="linkedin-bg" href="#"><i class="fa fa-linkedin"></i></a>
+                                                        <a class="instagram-bg" href="#"><i class="fa fa-instagram"></i></a>
+                                                    </div><!-- /.social-links -->
+                                                </div><!-- /.team-member-info -->
+                                            </div><!-- /.team-member -->
+                                        </div>
+                                    </div><!-- /.item -->
+                                    <div class="item">
+                                        <div class="col-sm-12">
+                                            <div class="team-member">
+                                                <div class="team-member-img">
+                                                    <img class="img-carousel" src="../../static/educate/img/employee-2.jpg" alt="">
+                                                </div><!-- /.team-member-img -->
+                                                <div class="team-member-info">
+                                                    <h4 class="team-member-name">Linda Smith</h4>
+                                                    <h5 class="team-member-position">Human Resources</h5>
+                                                    <p class="team-member-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    <div class="social-links">
+                                                        <a class="twitter-bg" href="#"><i class="fa fa-twitter"></i></a>
+                                                        <a class="facebook-bg" href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a class="google-plus-bg" href="#"><i class="fa fa-google-plus"></i></a>
+                                                        <a class="linkedin-bg" href="#"><i class="fa fa-linkedin"></i></a>
+                                                        <a class="instagram-bg" href="#"><i class="fa fa-instagram"></i></a>
+                                                    </div><!-- /.social-links -->
+                                                </div><!-- /.team-member-info -->
+                                            </div><!-- /.team-member -->
+                                        </div>
+                                    </div><!-- /.item -->
+                                    <div class="item">
+                                        <div class="col-sm-12">
+                                            <div class="team-member">
+                                                <div class="team-member-img">
+                                                    <img class="img-carousel" src="../../static/educate/img/employee-3.jpg" alt="">
+                                                </div><!-- /.team-member-img -->
+                                                <div class="team-member-info">
+                                                    <h4 class="team-member-name">Matt Ryan</h4>
+                                                    <h5 class="team-member-position">Coordinator</h5>
+                                                    <p class="team-member-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    <div class="social-links">
+                                                        <a class="twitter-bg" href="#"><i class="fa fa-twitter"></i></a>
+                                                        <a class="facebook-bg" href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a class="google-plus-bg" href="#"><i class="fa fa-google-plus"></i></a>
+                                                        <a class="linkedin-bg" href="#"><i class="fa fa-linkedin"></i></a>
+                                                        <a class="instagram-bg" href="#"><i class="fa fa-instagram"></i></a>
+                                                    </div><!-- /.social-links -->
+                                                </div><!-- /.team-member-info -->
+                                            </div><!-- /.team-member -->
+                                        </div>
+                                    </div><!-- /.item -->
+                                    <div class="item">
+                                        <div class="col-sm-12">
+                                            <div class="team-member">
+                                                <div class="team-member-img">
+                                                    <img class="img-carousel" src="../../static/educate/img/employee-4.jpg" alt="">
+                                                </div><!-- /.team-member-img -->
+                                                <div class="team-member-info">
+                                                    <h4 class="team-member-name">Cindy Bell</h4>
+                                                    <h5 class="team-member-position">PR Marketing</h5>
+                                                    <p class="team-member-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    <div class="social-links">
+                                                        <a class="twitter-bg" href="#"><i class="fa fa-twitter"></i></a>
+                                                        <a class="facebook-bg" href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a class="google-plus-bg" href="#"><i class="fa fa-google-plus"></i></a>
+                                                        <a class="linkedin-bg" href="#"><i class="fa fa-linkedin"></i></a>
+                                                        <a class="instagram-bg" href="#"><i class="fa fa-instagram"></i></a>
+                                                    </div><!-- /.social-links -->
+                                                </div><!-- /.team-member-info -->
+                                            </div><!-- /.team-member -->
+                                        </div>
+                                    </div><!-- /.item -->
+                                    <div class="item">
+                                        <div class="col-sm-12">
+                                            <div class="team-member">
+                                                <div class="team-member-img">
+                                                    <img class="img-carousel" src="../../static/educate/img/employee-5.jpg" alt="">
+                                                </div><!-- /.team-member-img -->
+                                                <div class="team-member-info">
+                                                    <h4 class="team-member-name">Frank Dawson</h4>
+                                                    <h5 class="team-member-position">COO</h5>
+                                                    <p class="team-member-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    <div class="social-links">
+                                                        <a class="twitter-bg" href="#"><i class="fa fa-twitter"></i></a>
+                                                        <a class="facebook-bg" href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a class="google-plus-bg" href="#"><i class="fa fa-google-plus"></i></a>
+                                                        <a class="linkedin-bg" href="#"><i class="fa fa-linkedin"></i></a>
+                                                        <a class="instagram-bg" href="#"><i class="fa fa-instagram"></i></a>
+                                                    </div><!-- /.social-links -->
+                                                </div><!-- /.team-member-info -->
+                                            </div><!-- /.team-member -->
+                                        </div>
+                                    </div><!-- /.item -->
+                            </div><!-- /.carousel-inner -->
+                        </div><!-- /.carousel -->
+                    </div>
+
+                    <div class="col-md-8 col-md-offset-2 hidden-xs">
+                        <div class="carousel carousel-sync four-slides-slider multi-item-carousel slide" data-interval="false" id="fourSlidesSlider">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="col-sm-4 col-md-3">
+                                      <img src="../../static/educate/img/employee-2.jpg" alt="" class="img-carousel">
+                                    </div>
+                                </div><!-- /.item -->
+                                <div class="item">
+                                    <div class="col-sm-4 col-md-3">
+                                      <img src="../../static/educate/img/employee-3.jpg" alt="" class="img-carousel">
+                                    </div>
+                                </div><!-- /.item -->
+                                <div class="item">
+                                    <div class="col-sm-4 col-md-3">
+                                      <img src="../../static/educate/img/employee-4.jpg" alt="" class="img-carousel">
+                                    </div>
+                                </div><!-- /.item -->
+                                <div class="item">
+                                    <div class="col-sm-4 col-md-3">
+                                      <img src="../../static/educate/img/employee-5.jpg" alt="" class="img-carousel">
+                                    </div>
+                                </div><!-- /.item -->
+                                <div class="item">
+                                    <div class="col-sm-4 col-md-3">
+                                      <img src="../../static/educate/img/employee-1.jpg" alt="" class="img-carousel">
+                                    </div>
+                                </div><!-- /.item -->
+                            </div><!-- /.carousel-inner -->
+                        </div><!-- /.multi-item-carousel -->
+                    </div>
+
+                    <div class="col-md-12">
+
+                        <div class="multi-item-controls text-center">
+
+                            <a href="#fourSlidesSlider" class="left btn btn-gray-border carousel-control" data-slide="prev"><i class="fa fa-angle-left" aria-hidden="true"></i>
+                            </a>
+                            <a href="#fourSlidesSlider" class="right btn btn-gray-border carousel-control" data-slide="next"><i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </a>
+
+                        </div><!-- /.multi-item-controls -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- /.section-team -->
+
+
+        <section class="social-networks">
+
+            <div class="container-fluid">
+
+                <div class="row">
+
+                    <a class="white-text black-bg twitter-bg" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a class="white-text gray-bg facebook-bg" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a class="white-text black-bg google-plus-bg" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a class="white-text gray-bg message-bg" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+
+                </div>
+
+            </div>
+
+        </section><!-- /.social-networks -->
+
+    </main><!-- /.site-main -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../../static/educate/js/bootstrap.min.js"></script>
+    <script src="../../static/educate/js/jquery.slicknav.min.js"></script>
+    <script src="../../static/educate/js/slick.min.js"></script>
+    <script src="../../static/educate/js/touchswipe.min.js"></script>
+    <script src="../../static/educate/js/skrollr.min.js"></script>
+    <script src="../../static/educate/js/jquery.countTo.min.js"></script>
+    <script src="../../static/educate/js/script.js"></script>
+
+</body>
+
+{% endblock main %}
